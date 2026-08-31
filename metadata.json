@@ -1,0 +1,6 @@
+{
+  "name": "ID Card Print & Download Portal",
+  "description": "Search, preview, print and download ID cards directly with Google Sheets data integration and high-resolution template printing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

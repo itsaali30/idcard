@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Print Specific Rules for Physical ID Card Printing */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide everything on the page except the printable card container */
+  header,
+  nav,
+  footer,
+  #search-id-input,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  #aadhaar-card-print-area {
+    box-shadow: none !important;
+    margin: 10mm auto !important;
+    page-break-inside: avoid !important;
+    display: inline-flex !important;
+    transform: scale(1) !important;
+  }
+
+  /* Batch print styles */
+  #batch-print-container {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15mm !important;
+  }
+
+  #batch-print-container > div {
+    page-break-inside: avoid !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+}
+
